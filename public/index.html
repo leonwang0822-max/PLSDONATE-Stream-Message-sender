@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLSDONATE Stream Message sender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PLSDONATE Stream Message sender</h1>
+            <div id="status-indicator" class="status stopped">Stopped</div>
+        </header>
+
+        <main>
+            <section class="config-section">
+                <h2>Configuration</h2>
+                <div class="form-group">
+                    <label>Twitch Username</label>
+                    <input type="text" id="twitchUsername" placeholder="Your Twitch Username">
+                </div>
+                <div class="form-group">
+                    <label>Twitch OAuth Access Token</label>
+                    <input type="password" id="twitchToken" placeholder="Paste Access Token (e.g. oauth:u598...)">
+                    <small>1. Go to <a href="https://twitchtokengenerator.com/" target="_blank">Twitch Token Generator</a>.<br>
+                    2. Select 'Custom Scope', enable <b>chat:read</b> and <b>chat:edit</b>.<br>
+                    3. Click 'Generate Token' and copy the <b>Access Token</b>.</small>
+                </div>
+                <div class="form-group">
+                    <label>Message to Send</label>
+                    <textarea id="message" rows="3" placeholder="my username realleonw"></textarea>
+                </div>
+                <div class="actions">
+                    <button id="saveBtn">Save Config</button>
+                    <button id="startBtn" class="btn-success">Start Fetching Streams</button>
+                    <button id="stopBtn" class="btn-danger" disabled>Stop</button>
+                    <button id="sendNowBtn" style="background-color: #007bff;" disabled>📨 Send Now</button>
+                </div>
+            </section>
+
+            <section class="logs-section">
+                <h2>Activity Logs</h2>
+                <div id="logs" class="logs-container">
+                    <!-- Logs will appear here -->
+                </div>
+            </section>
+
+            <section class="streams-section">
+                <h2>Last Found Streams</h2>
+                <div id="streamsList" class="streams-grid">
+                    <!-- Streams will appear here -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
