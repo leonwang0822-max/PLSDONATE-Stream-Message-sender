@@ -1,6 +1,6 @@
 # PLSDONATE Stream Message Sender
 
-A powerful tool to automatically fetch streams from [plsdonatestreams.com](https://plsdonatestreams.com) and send bulk messages to Twitch chats.
+A powerful tool to automatically fetch roblox plsdonate streams and send bulk messages to Twitch chats.
 
 ![Website Preview](./image.png)
 
